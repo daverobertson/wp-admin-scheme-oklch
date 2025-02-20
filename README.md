@@ -12,7 +12,7 @@ npm install wp-admin-scheme-oklch
 
 ## Usage
 
-Import the [admin.css](admin.scss) file. Then, define the css variables, scoped to `#wpadminbar` and `#adminmenumain`.
+Import the [admin.css](admin.css) file. Then, define the css variables, scoped to `#wpadminbar` and `#adminmenumain`.
 
 ```
 @import 'wp-admin-scheme-oklch/admin.css';
