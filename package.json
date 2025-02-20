@@ -1,0 +1,17 @@
+{
+  "name": "wp-admin-scheme-oklch",
+  "version": "0.1.0",
+  "description": "WordPress admin color scheme expressed as CSS variables using OKLCH values.",
+  "author": "Dave Robertson <dave@factory44.net> (https://factory44.net)",
+  "license": "ISC",
+  "main": "admin.css",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daverobertson/wp-admin-scheme-oklch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daverobertson/wp-admin-scheme-oklch/issues"
+  },
+  "homepage": "https://github.com/daverobertson/wp-admin-scheme-oklch#readme"
+}
