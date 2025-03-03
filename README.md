@@ -17,7 +17,7 @@ In your stylesheet, import the [admin.css](admin.css) file. Then, define the css
 ```
 @import 'wp-admin-scheme-oklch/admin.css';
 
-/* A blue and purple scheme */
+/* A purple and blue scheme */
 
 #wpadminbar,
 #adminmenumain {
@@ -27,10 +27,15 @@ In your stylesheet, import the [admin.css](admin.css) file. Then, define the css
   --notification-color: oklch(0.718 0.202 349.761);
   --menu-bubble-text: oklch(0.257 0.09 281.288);
 }
-
 ```
 
-Your stylesheet then can be loaded into the WP Admin, e.g.
+Example:
+
+<img src="examples/purple-blue@2x.jpg?raw=true" width="600" style="max-width:100%" alt="Screenshot of the example purple and blue color scheme">
+
+### Loading the stylesheet
+
+Your stylesheet then can be loaded into the WP Admin with the `admin_enqueue_scripts` hook. For example:
 
 ```
 add_action('admin_enqueue_scripts', function () {
@@ -38,7 +43,7 @@ add_action('admin_enqueue_scripts', function () {
 });
 ```
 
-...and also the front-end by hooking `wp_enqueue_scripts`. This will make the admin bar consistent with how it appears in the WP Admin.
+...and also the front-end by hooking `wp_enqueue_scripts`. This will make the admin bar appear the same way as logged-in users view the public website.
 
 Note: OKLCH values are expected, since other CSS variables inherit these and some make [on-the-fly adjustments](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl#color-modifications-in-css). It's possible to use other color formats (e.g. hex), but all variables would need to be defined.
 
@@ -74,10 +79,13 @@ In its version 4, Tailwind introduced [CSS variables using OKLCH](https://tailwi
 
   --menu-bubble-text: var(--base-color);
 }
-
 ```
 
-### All the variables
+Example:
+
+<img src="examples/green-amber@2x.jpg?raw=true" width="600" style="max-width:100%" alt="Screenshot of the example green and amber color scheme">
+
+### All the variables!
 
 Below are all the CSS variables available for overriding. These correspond to the SASS values from the WordPess core color schemes.
 
@@ -131,6 +139,10 @@ Below are all the CSS variables available for overriding. These correspond to th
   --adminbar-recovery-exit-background-alt: oklch(from var(--adminbar-recovery-exit-background) calc(l - 0.1) c h);
 }
 ```
+
+The default scheme:
+
+<img src="examples/default@2x.jpg?raw=true" width="600" style="max-width:100%" alt="Screenshot of the default WordPress color scheme">
 
 ## License
 
