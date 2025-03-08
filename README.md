@@ -52,7 +52,7 @@ Note: OKLCH values are expected, since other CSS variables inherit these and som
 In its version 4, Tailwind introduced [CSS variables using OKLCH](https://tailwindcss.com/docs/colors#default-color-palette-reference) for its color palette. Importing tailwind will make all their color tokens available, along with its `--alpha()` helper function:
 
 ```
-@import "tailwindcss";
+@import "tailwindcss/theme.css" layer(theme);
 
 @import 'wp-admin-scheme-oklch/admin.css';
 
